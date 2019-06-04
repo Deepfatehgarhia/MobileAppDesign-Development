@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>fundTransfer</title>
+		<link rel="stylesheet" type="text/css" href="fund_styles.css">
+
+	</head>
+
+	<body>
+		<header>
+
+			<div class="container">
+				<div >
+				<h1 class="title">Welcome: Test </h1>
+
+		</header>
+
+
+</div>
+
+<div>
+    <!-- Adding a form to transfer Balance -->
+		<section class="container">
+			<h2 id="title-form">Transfer Funds</h2>
+			<!-- Adding an id to the form -->
+			<form name="myform" id="form-fund">
+
+
+
+		  From:</br>
+						<select  id="fromaccount"  onchange="validation(this.value);">
+							<option >Selct Account</option>
+
+					  <option value="Checking">Checking</option>
+					  <option value="Saving">Saving</option>
+
+				</select> </br></br></br>
+
+				  To:</br>
+					<select name="toaccount" id="toaccount" >
+						<option value="Selct Account">Selct Account</option>
+							<option value="Checking">Checking</option>
+							<option value="Saving">Saving</option>
+							<option value="other">Others</option>
+					</select><br><br>
+
+					<section class="container">
+						<h2 id="title-form">Transfer Funds</h2>
+						<!-- Adding an id to the form -->
+						<form name="myform" id="form-fund">
+
+
+
+						From:</br>
+									<select  id="fromaccount"  onchange="validation(this.value);">
+										<option >Selct Account</option>
+
+									<option value="Checking">Checking</option>
+									<option value="Saving">Saving</option>
+
+							</select> </br></br></br>
+
+								To:</br>
+								<select name="toaccount" id="toaccount" >
+									<option value="Selct Account">Selct Account</option>
+										<option value="Checking">Checking</option>
+										<option value="Saving">Saving</option>
+										<option value="other">Others</option>
+								</select><br><br>
+
+									<br>
+									<p type="text" id="current"  name="currentbalance"  > Currentbalance:</p><br><br>
+									Amount:<br>
+
+									<input type="text" id="amount" name="amount" placeholder="Enter amount here:"><br><br>
+
+										<button id="transfer" onclick="transferFund();" >Transfer</button>
+										<br><br>
+
+									<br>
+									<p type="text" id="balanceamount" name="balanceamount" > Pending Balance:</p> <br><br>
+
+
+
+			</form>
+		</section>
+</div>
+</div>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript"  src="js/fundcal.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,119 @@
+body
+{background-image: url(i1.jpg);
+height:100vh;
+background-size:cover;
+
+	font-family: Georgia, serif ;
+}
+
+
+.logo img{
+	float: left;
+	width: 150px;
+
+}
+
+.login{
+	padding-left: 950px;
+	margin-top : 20px;
+font-size: 30px;
+color: black;
+
+}
+.login b{
+color: black;
+
+}
+.main h1{
+	position: absolute;
+	color: brown;
+	font-size: 50px;
+	padding-left: 100px;
+
+}
+#container ul{
+	list-style:none;
+}
+
+#container ul li{
+width:150px;
+
+float:left;
+text-align:center;
+}
+#container ul ul{
+	display:none;
+
+}
+#container ul li{
+color:black;
+}
+#container ul li:hover > ul{
+	display:block;
+}
+
+
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}

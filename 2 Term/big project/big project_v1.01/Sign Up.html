@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="utf-8">
+      <script src="signup.js"></script>
+    <style>
+
+ form
+ {
+ max-width:650px;
+ background:rgba(19,35,47,0.5);
+    margin-left:25%;
+
+ margin-right:25%;
+ border-radius:5px;
+
+ }
+
+  body
+  {
+   background-color:#728456;
+ }
+  th
+  {
+   font-size:40px;
+
+  }
+  td
+  {
+  font-size:20px;
+  }
+  input
+  {
+  padding:5px;
+  border-radius:5px;
+
+  }.submit{
+  border: none;
+ outline:none;
+ height:40px;
+ background:lightgray;
+ color: black;
+ font-size:18px;
+ border-radius: 20px;
+  padding:6px 60px 6px 60px;
+  font-size:20px;}
+  .submit:hover{
+ cursor: pointer;
+
+ background:#ffc107;
+ color:#000;
+}
+
+
+ </style>
+   <title>
+  Seeker Sign up
+   </title>
+  </head>
+  <body  >
+    <form >
+  <table cellpadding="20" align="center;">
+   <th colspan="1">
+   Sign Up
+   </th>
+   <div>
+     <tr>
+       <td><label class="container">
+         <input type="radio"  id="0" value="0" name="radio" >Seeker
+         <span class="checkmark"></span>
+       </label></td>
+     <td>  <label class="container">
+         <input type="radio" id="1" value="1" name="radio">Company
+         <span class="checkmark"></span>
+       </label></td>
+     </tr>
+    <th colspan="1">
+      <input  type="button" id="cancelButton" onclick="cancel();" value="Next" /></th>
+
+    </th>
+  </table>
+</div>
+ </form>
+  </body>
+ </html>

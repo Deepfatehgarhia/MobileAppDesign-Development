@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Print Check</title>
+<form action="changePwd.html" method="get">
+<!-- CSS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.menu
+{
+background-color: #00547E;
+border-bottom: 4px solid #04A3ED;
+width:100%;
+height: auto;
+padding: 0 10px;
+position: fixed;
+margin: 0px;
+z-index: 1;
+opacity: 0.9;
+}
+
+.menu  .navbar-nav > .active > a
+{
+background-color : #04A3ED;
+color: white;
+font-weight: bold;
+}
+
+.menu  .navbar-nav >  li >  a
+{
+font-size: 13px;
+color: white;
+padding: 10px 35px;
+
+}
+.menu  .navbar-nav >  li >  a:hover
+{
+background-color: #04A3ED;
+}
+
+.navbar-header > a
+{
+font-family: 'Ubuntu Condensed', sans-serif;
+padding: 0px;
+margin: 0px;
+text-decoration: none;
+color: white;
+font-size: 25px;
+padding: 5px 30px;
+}
+.navbar-header > a:hover
+{
+text-decoration: none;
+color: #04A3ED;
+}
+
+
+.btn-nav {
+    background-color: #fff;
+    border: 1px solid #e0e1db;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.btn-nav:hover {
+    color: #e92d00;
+    cursor: pointer;
+    -webkit-transition: color 1s; /* For Safari 3.1 to 6.0 */
+    transition: color 1s;
+}
+.btn-nav .glyphicon {
+    padding-top: 16px;
+	font-size: 40px;
+}
+h2
+{
+	color: black;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+h2 span
+{
+	color: #ec2158;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
+{
+	border-top: none !important;
+}
+#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center; }
+</style>
+</head>
+<body>
+
+<div class="menu">
+    <div class="container-fluid">
+		<div class="navbar-header">
+			<a href="index.html">LAMBTBANK</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="transferFunds.html" ><span class="glyphicon glyphicon-usd"></span> Transfer Funds </a></li>
+				<li><a href="changePwd.html"><span class="glyphicon glyphicon-pencil"></span> Change Password </a></li>
+				<li><a href="printCheck.html"><span class="glyphicon glyphicon-print"></span> Print Check </a></li>
+				<li><a href="accSummary.html"><span class="glyphicon glyphicon-menu-hamburger"></span> Account Summary </a></li>
+				<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> Exit</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row" style="margin-top:10%;">
+		<h2>Print <span>Check </span></h2>
+	</div>
+	<br/>
+    <div class="row" style="background-color:white;" id="printCheck">
+		<div class="table-responsive">
+			<div class="table-responsive custom_datatable">
+				<table class="table " style="width:100%;margin:auto;text-align:left;" >
+					<tbody>
+						<tr>
+							<td colspan="5" style="font-size:25px;font-weight:bold;text-align:center;"> LAMBTBANK </td>
+						</tr>
+						<tr>
+							<td colspan="3">Account Holder Name <br/> Street Address <br/> City, Province Postal Code </td>
+							<td colspan="2">001</td>
+						</tr>
+						<tr>
+							<td colspan="3"></td>
+							<td colspan="2">Date -----------------------</td>
+						</tr>
+						<tr>
+							<td colspan="2">Pay To The Order Of</td>
+							<td colspan="1" style="width:600px;">
+							--------------------------------------------------------------------------------------------------------<br><br/>
+							--------------------------------------------------------------------------------------------------------</td>
+							<td colspan="2"><span>$<span>
+							<input type="text" style="width:150px;height:30px;margin-left:100x;"></td>
+
+						</tr>
+						<tr>
+							<td colspan="5">Bank Name <br/>
+							Bank Street Address <br/>
+							Bank City,Province Postal Code
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5" style="text-align:center;">
+							<b>	i' 006 i' &nbsp &nbsp :05550 :: &nbsp &nbsp  004 :  &nbsp &nbsp i 27864i82678 i' </b>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+	<center style="margin-top:5px;"> <button type="button" class="btn btn-info" id="print_check"> Print Check </button></center>
+
+</div>
+<div id="preloader" style="display:none;"></div>
+<!-- Javascript -->
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.backstretch.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
+<script>
+$("#print_check").click(function()
+{
+	var divToPrint = document.getElementById('printCheck');
+	//document.getElementById("xlsx").setAttribute("border", "1");
+	var popupWin = window.open('', '_blank', 'width=400,height=400');
+	popupWin.document.open();
+	popupWin.document.write('<html><title>LAMBTBANK CHECK </title> <head>   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><style>.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{border-top: none !important;}</style> </head><body onload="window.print()" > ' + divToPrint.innerHTML + '</div>   </div></body></html>');
+	popupWin.document.close();
+});
+
+</script>

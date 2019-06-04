@@ -1,0 +1,26 @@
+About me
+
+I live in São Paulo but I serve clients from all over the world. I am known for making quality, durable products that add value to my customers.
+I work using the web as a platform, ie I breathe HTML5, CSS3 and JavaScript (or rather: ECMASCript). I create sites for everyone, following the main accessibility, responsiveness and semantic web policies, without neglecting the quality of code.
+
+With the job
+
+John is the best front-end developer I've ever worked with. Very efficient and very capable. I recommend without a doubt!
+- José Souza, Fiat
+
+Satising my customers is a priority. For this, I guarantee a highly interactive development process, based on continuous feedback. Do not work with closed scope: the customer decides when the product is ready.
+
+Nor do I work with deadlines: quality is too important to be sacrificed.
+
+Experience
+
+John dominates technologies like nobody else. I had a problem, he had the tip of the tongue the most appropriate solution with the latest technologies.
+- Manoel Santos, Petrobrás
+
+I have already developed projects for big companies like BMW, Spotfy and IBM. In them, the main focus was to deliver an immersive and impactful experience to the end user without neglecting the performance and accessibility of the page.
+
+I've also been hired to turn large portals, like the New York Times, into responsive pages. I was responsible for revamping the layout, rearranging the content, and rewriting the code in a more reusable way.
+
+Community
+
+I try to pass on my knowledge to the community. For this, I have given several lectures and I maintain a blog.

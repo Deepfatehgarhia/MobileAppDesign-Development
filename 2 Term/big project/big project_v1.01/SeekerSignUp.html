@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+      <script src="signup.js"></script>
+      <meta charset="utf-8">
+    <style>
+
+ form
+ {
+ max-width:650px;
+ background:rgba(19,35,47,0.5);
+    margin-left:25%;
+
+ margin-right:25%;
+ border-radius:5px;
+
+ }
+
+  body
+  {
+   background-color:#728456;
+ }
+  th
+  {
+   font-size:40px;
+
+  }
+  td
+  {
+  font-size:20px;
+  }
+  input
+  {
+  padding:5px;
+  border-radius:5px;
+
+  }.submit{
+  border: none;
+ outline:none;
+ height:40px;
+ background:lightgray;
+ color: black;
+ font-size:18px;
+ border-radius: 20px;
+  padding:6px 60px 6px 60px;
+  font-size:20px;}
+  .submit:hover{
+ cursor: pointer;
+
+ background:#ffc107;
+ color:#000;
+}
+
+
+ </style>
+   <title>
+   Sign up
+   </title>
+  </head>
+  <body>
+    <form>
+  <table cellpadding="20">
+   <th colspan="2">
+   Sign Up
+   </th>
+   <tr>
+   <td>First Name</td>
+   <td> <input type="text" id="firstname"size="60">
+   <tr>
+     <tr>
+      <td>Last Name</td>
+      <td> <input type="text" id="lastname"size="60">
+      <tr>
+   <tr>
+   <td>Email_id</td>
+   <td> <input type="text" id="emailid"size="60">
+   </tr>
+   <tr>
+   <td>Phone Number</td>
+   <td> <input type="Number"id="phoneno" size="60">
+   </tr>
+
+   <td>Password</td>
+   <td> <input type="password" id="password"size="60">
+   </tr>
+
+   <th colspan="2">
+     <input type="button" onclick="createSeekerUsers();" value="Register"/input>
+     <input  type="button" id="cancelButton" onclick="cancel();" value="Cancel"/input>
+     <script type="text/javascript">
+     function cancel(){
+     document.getElementById("cancelButton").onclick = function () {
+         location.href = "flyer.html";
+     };
+
+     window.alert(location.href = "flyer.html");
+}
+ </script>
+   </th>
+   </tr>
+
+  </table>
+ </form>
+  </body>
+ </html>

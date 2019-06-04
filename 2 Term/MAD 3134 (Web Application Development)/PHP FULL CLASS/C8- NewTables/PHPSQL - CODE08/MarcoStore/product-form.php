@@ -1,0 +1,41 @@
+<?php include("header.php");
+      include("db-connect.php");
+      include("category-db-functions.php");
+
+$categories = listCategories($conection);
+?>
+
+<h1>Product Form</h1>
+<form action="add-product.php" method="post">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td><input class="form-control" type="text" name="name" /></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input class="form-control" type="number" name="price" /></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><textarea class="form-control" name="description"></textarea></td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>
+              <?php foreach ($categories as $category) : ?>
+                <input type="radio" name="category_id"
+                       value="<?=$category['id']?>">
+                        <?=$category['name']?></br>
+              <?php endforeach?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <button class="btn btn-primary" type="submit">Add</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<?php include("footer.php"); ?>

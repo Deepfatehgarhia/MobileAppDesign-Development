@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+      <head>
+        <title>Transfer page</title>
+
+
+      <style>
+      .box{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:40%;
+      height:60%;
+      padding:16px;
+      border:2px solid black;
+      background-color:#001a44;
+      color:white;
+      }
+      </style>
+      </head>
+      <body  style="color:white;">
+        <div>
+      <div style="width:50%; margin:0 auto;">
+
+      </div>
+      </div>
+
+      <div class="box"
+<h1>Transfer Funds</h1>
+<form action="accSummary.html" method="get">
+      <table>
+      <tr>
+      <td><label>From:</label></td>
+      <td><select name="from" >
+            <option value="1">Saving Account</option>
+            <option value="2">Chequing Account</option>
+          </select>
+      </td>
+      </tr>
+      <tr>
+      <td><label>To:</label></td>
+      <td><select name="to" >
+            <option value="1">Saving Account</option>
+            <option value="2">Chequing Account</option>
+            <option value="3">Other Account</option>
+            <label>Acc No.</label>
+								<input type="number" class="form-control" name="acc_no" id="acc_no">
+          </select></td>
+      </tr>
+      <tr>
+      <td><label>Current Balance</label></td>
+      <td><p id="lbl_current"></p></td>
+      </tr>
+      <tr>
+      <td><label>Amount</label></td>
+      <td><input type="number" name="amount" id="amount_val" value="" placehoder="Enter the amount" required/></td>
+      </tr>
+      <tr>
+      <td><label>Final Balance</label></td>
+      <td><p id="lbl_final"></p></td>
+      </tr>
+
+      <tr>
+      <td><label>Credit Limit</label></td>
+      <td><p id="lbl_credit"></p></td>
+      </tr>
+
+      <tr>
+      <td><label>Available Credit</label></td>
+      <td><p id="lbl_availablecredit"></p></td>
+
+      </tr>
+
+      <tr>
+      <td><input type="button" name="submit" value="Submit" onclick="updateForm()" /></td>
+      <td><input type="reset" name="reset" value="Reset" /></td>
+
+      </tr>
+      </table>
+      <a style="color:yellow;"href="index.html">Back to page 1</a><br>
+
+      </div>
+      <script>
+      var current_balance = "1000";
+      var final_balance = "1000";
+      var credit_limit = "1000";
+      var available_credit= "980";
+
+      document.getElementById("lbl_current").innerHTML=current_balance;
+      document.getElementById("lbl_final").innerHTML=final_balance;
+document.getElementById("lbl_credit").innerHTML=credit_limit_balance;
+document.getElementById("lbl_availablecredit").innerHTML=available_credit;
+
+
+
+      function updateForm(){
+
+          var amount_val = document.getElementsByName("amount")[0].value;
+           if(amount_val<=0){
+              alert("Please enter a valid amount");
+              return;
+           }
+           current_balance=final_balance-amount_val;
+           final_balance=final_balance-amount_val;
+
+           document.getElementById("lbl_current").innerHTML=current_balance;
+           document.getElementById("lbl_final").innerHTML=final_balance;
+
+         document.getElementById("lbl_availablecredit").innerHTML=available_credit;
+           document.getElementsByName("amount")[0].value=0;
+
+           document.getElementById("lbl_credit").innerHTML=credit_limit;
+      }
+      </script>
+        </body>
+
+        </html>

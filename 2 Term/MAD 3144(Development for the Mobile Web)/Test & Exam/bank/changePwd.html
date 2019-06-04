@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Change Password</title>
+<form action="logout.html" method="get">
+<!-- CSS -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/changePwd.css">
+<script>
+if(sessionStorage.userSession == undefined)
+{
+	document.write("Sorry! Unauthorized Access. Please Login");
+	window.location.href="login.html";
+}
+</script>
+
+</head>
+<body>
+
+<div class="menu">
+    <div class="container-fluid">
+		<div class="navbar-header">
+			<a href="index.html">LAMBTBANK</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="transferFunds.html" ><span class="glyphicon glyphicon-usd"></span> Transfer Funds </a></li>
+				<li><a href="changePwd.html"><span class="glyphicon glyphicon-pencil"></span> Change Password </a></li>
+				<li><a href="printCheck.html"><span class="glyphicon glyphicon-print"></span> Print Check </a></li>
+				<li><a href="accSummary.html"><span class="glyphicon glyphicon-menu-hamburger"></span> Account Summary </a></li>
+				<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> Exit</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+        <!-- Top content -->
+        <div class="top-content">
+
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h2><strong>Lambton Bank </strong> <span>Change Password</span></h2>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+						<div class="form-bottom">
+                        	<form action="#" class="login-form" name="changePassword" id="changePassword">
+							  <div class="form-group">
+								<label for="oldpwd">Old Password:</label>
+								<input type="password" name="old_password" class="form-control" placeholder="Enter Old Password" id="old_password">
+							  </div>
+							  <div class="form-group">
+								<label for="pwd">New Password:</label>
+								<input type="password" name="new_password" placeholder="Enter New Password" class="form-control" id="new_password">
+							  </div>
+							  <button type="submit" class="btn btn-info">Submit</button>
+							</form>
+							</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+		<div id="preloader" style="display:none;"></div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+    </body>
+
+</html>
+<script>
+$(document).ready(function()
+{
+	$("#changePassword").on("submit",function(e)
+	{
+		e.preventDefault();
+		$('#preloader').fadeIn('slow');
+
+		var old_password=$("#old_password").val();
+		var new_password=$("#new_password").val();
+
+		if(sessionStorage.userName==sessionStorage.default_first_Username)
+		{
+			if(old_password==sessionStorage.default_first_Password)
+			{
+				sessionStorage.setItem("default_first_Password", new_password);
+				alert("Password Changed Successfully");
+				setTimeout(function()
+				{
+					window.location.href="index.html";
+				}, 2000);
+			}
+			else
+			{
+				$('#preloader').fadeOut('slow');
+				alert("Invalid Password");
+			}
+		}
+		else if(sessionStorage.userName==sessionStorage.default_second_Username)
+		{
+			if(old_password==sessionStorage.default_second_Password)
+			{
+				sessionStorage.setItem("default_second_Password", new_password);
+				alert("Password Changed Successfully");
+				setTimeout(function()
+				{
+					window.location.href="login.html";
+				}, 2000);
+			}
+			else
+			{
+				$('#preloader').fadeOut('slow');
+				alert("Invalid Password");
+			}
+		}
+		else
+		{
+			alert("Sorry! Unauthorized Access");
+			window.location.href="login.html";
+		}
+
+
+	});
+});
+</script>
